@@ -4,6 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'rest-client'
 gem 'dotenv-rails'
+gem 'dotenv'
+gem 'acts_as_votable'
+gem 'acts_as_favoritor'
+gem 'acts-as-taggable-on', '~> 6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
