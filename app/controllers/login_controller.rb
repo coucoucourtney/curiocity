@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
 
+  URL = "https://api.weixin.qq.com/sns/jscode2session".freeze
+
   def login
     @user = User.find_or_create_by(open_id: wechat_user.fetch("openid"))
     render json: {
