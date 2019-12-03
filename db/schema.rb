@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_080845) do
+ActiveRecord::Schema.define(version: 2019_12_03_081736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 2019_12_03_080845) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "wechat_name"
+    t.string "avatar"
+    t.string "level"
+    t.text "description"
+    t.string "favoritor_score"
+    t.string "favoritor_total"
+    t.string "favoritable_score"
+    t.string "favoritable_total"
   end
 
   add_foreign_key "buildings", "users"
