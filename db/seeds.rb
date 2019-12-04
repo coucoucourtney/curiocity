@@ -110,6 +110,40 @@ end
 
 puts "#{Building.count} buildings are created"
 
+
+puts "destroying users..."
+User.destroy_all
+
+users_data = [
+  { wechat_name: "Curious Carrie",
+    avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
+    open_id: "code",
+    email: "123@abc.cn",
+    language: "engrish",
+    gender: "2",
+    level: "super",
+    description: "banana fo fanana"
+    },
+
+  { wechat_name: "Moo-Moo-Poo-Poo",
+    avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
+    open_id: "code",
+    email: "456@abc.cn",
+    language: "engrish",
+    gender: "1",
+    level: "lower",
+    description: "banana fo fanana"
+    }
+]
+
+puts "Creating users"
+
+users_data.each do |data|
+  user =  User.create!(data)
+  p "#{user.wechat_name} is created"
+end
+
+puts "#{User.count} users are created"
 # t.string "name"   #  t.string "year"
 #  t.string "architects"
 #  t.string "neighborhood"
