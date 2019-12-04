@@ -96,7 +96,7 @@ buildings_data = [
 puts "Creating buildings"
 
 buildings_data.each do |data|
-  building =  Building.create!(data)
+  building = Building.create!(data)
   print "#{building.name} is created"
 end
 
