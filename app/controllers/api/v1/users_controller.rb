@@ -1,12 +1,12 @@
 class Api::V1::UsersController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
   def index
     @users = User.all
     # render json: @stories
   end
 
   def show
-
   end
 
   def create
@@ -30,7 +30,7 @@ class Api::V1::UsersController < Api::V1::BaseController
 
 
   def destroy
-    
+
   end
 
   private
