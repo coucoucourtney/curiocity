@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_034540) do
+ActiveRecord::Schema.define(version: 2019_12_05_072722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2019_12_04_034540) do
     t.string "favoritor_total"
     t.string "favoritable_score"
     t.string "favoritable_total"
+    t.boolean "admin", default: false, null: false
   end
 
   add_foreign_key "buildings", "users"
