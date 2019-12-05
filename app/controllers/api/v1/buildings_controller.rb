@@ -2,10 +2,10 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_building, only: [:show, :update, :destroy]
   # after_action :set_building, only: [:create]
-  before_action :set_current_user
+  before_action :set_current_user, only: [:favorite]
 
   def favorite
-    # @current_user =  User.find(params[:user_id])
+    # @current_user = User.find(params[:user_id])
     @building = Building.find(params[:id])
     @current_user.favorite(@building)
   end
