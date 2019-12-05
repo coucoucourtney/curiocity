@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "destroying checkpoints"
+Checkpoint.destroy_all
+
+puts "destroying routes"
+Route.destroy_all
 
 puts "destroying buildings..."
 Building.destroy_all
@@ -101,16 +106,14 @@ buildings_data = [
       }
 ]
 
-
 puts "Creating buildings"
 
 buildings_data.each do |data|
-  building =  Building.create!(data)
+  building = Building.create!(data)
   p "#{building.name} is created"
 end
 
 puts "#{Building.count} buildings are created"
-
 
 puts "destroying users..."
 User.destroy_all
@@ -140,11 +143,20 @@ users_data = [
 puts "Creating users"
 
 users_data.each do |data|
-  user =  User.create!(data)
+  user = User.create!(data)
   p "#{user.wechat_name} is created"
 end
 
 puts "#{User.count} users are created"
+
+route = Route.create!(name: "seed1")
+
+puts "test route created"
+
+checkpoint = Checkpoint.create!(route_id: route.id, building_id: Building.last.id)
+
+puts "test checkpoint was created routes_id #{route.id} building_id #{Building.last.id}"
+
 # t.string "name"   #  t.string "year"
 #  t.string "architects"
 #  t.string "neighborhood"
