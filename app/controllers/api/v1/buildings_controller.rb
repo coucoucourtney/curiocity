@@ -4,7 +4,18 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   # after_action :set_building, only: [:create]
 
   def index
-    @buildings = Building.order(:name)
+    if params[:query].present?
+      # sql_query = "
+      # name @@ :query
+      # OR architects @@ :query
+      # OR district @@ :query
+      # OR architectural_style @@ :query
+      # OR metro_stop @@ :query
+      # "
+      @buildings = Building.search_by_all(params[:query])
+    else
+      @buildings = Building.order(:name)
+    end
   end
 
   def update
