@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://gems.ruby-china.com" }
 
 ruby '2.6.3'
+gem 'pg_search', '~> 2.3.0'
 gem 'rest-client'
 gem 'dotenv-rails'
 gem 'dotenv'
