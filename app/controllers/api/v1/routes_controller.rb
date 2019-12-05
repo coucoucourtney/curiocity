@@ -18,6 +18,7 @@ class Api::V1::RoutesController < Api::V1::BaseController
   def create
     p route_params
     @route = Route.new(route_params)
+
     if @route.save
       p @route
       render :show, status: :created
