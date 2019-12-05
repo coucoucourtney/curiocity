@@ -149,13 +149,21 @@ end
 
 puts "#{User.count} users are created"
 
-route = Route.create!(name: "seed1")
+route1 = Route.create!(name: "Wulumuqi Moo-moo Lu")
+route2 = Route.create!(name: "Julu Lululu Circle")
+
 
 puts "test route created"
 
-checkpoint = Checkpoint.create!(route_id: route.id, building_id: Building.last.id)
+checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 1)
+checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 2)
+checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 3)
 
-puts "test checkpoint was created routes_id #{route.id} building_id #{Building.last.id}"
+checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 4)
+checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 5)
+checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 3)
+
+puts "test checkpoint was created"
 
 # t.string "name"   #  t.string "year"
 #  t.string "architects"
