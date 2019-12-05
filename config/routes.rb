@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :create, :update, :destroy]
       resources :buildings, only: [:index, :show, :create, :update, :destroy]
-      resources :routes, only: [:index, :show, :create, :update, :destroy]
+      resources :routes, only: [:index, :show, :create, :update, :destroy] do
+        resources :checkpoints, only: [:index, :show, :create, :update, :destroy]
+      end
     end
   end
   post '/login', to: 'login#login'
