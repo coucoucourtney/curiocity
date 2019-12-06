@@ -7,6 +7,7 @@ json.buildings do
     if @user_signed_in
       json.favorited building.favorited_by?(@user_signed_in)
       json.favoritable_total building.f_total
+      json.favoritable_count building.f_total
     end
   end
 end

@@ -2,7 +2,7 @@ json.extract! @building, :id, :name, :year, :architects, :neighborhood, :metro_s
 
 json.favorited @building.favorited_by?(@current_user)
 json.favoritable_total @building.f_total
-
+json.favoritable_count @building.f_total
 # if !@building.user.nil?
 #   json.building do
 #     json.array! @building.user do |data|
