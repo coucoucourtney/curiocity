@@ -26,9 +26,9 @@ buildings_data = [
       longitude: "121.4444",
       description: "French architect Alexandre Leonard’s love poem to his Russian wife, Anna Leontiev – they lived in the two-storey penthouse and their initials are in the entrance lobby terrazzo. Maritime Art Deco, from the balconies to the ship’s railing staircase.",
       main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/43c768d2b848a0e943e7/Amyron_Apartments_main.jpeg",
-      architectural_style: "Modern architecture",
-      metro_stop:"Zhaojiabang Road",
-      photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/43c768d2b848a0e943e7/Amyron_Apartments_main.jpeg"]
+      architectural_style: "Art Deco",
+      metro_stop:"Hengshang Road",
+      photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/43c768d2b848a0e943e7/Amyron_Apartments_main.jpeg","http://lc-lyUmBNQE.cn-n1.lcfile.com/096dd043f03600dcf917/amyron_2.jpg"]
       },
   {   name: "Rong Mansion",
       architects: "Alexandre Leonard",
