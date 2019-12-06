@@ -13,4 +13,8 @@ class Building < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `incomplete searches` will return something!
     }
+
+  def f_total
+    Favorite.for_favoritable(self).count
+  end
 end
