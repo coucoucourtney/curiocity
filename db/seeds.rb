@@ -179,13 +179,13 @@ route2 = Route.create!(name: "Julu Lululu Circle")
 
 puts "test route created"
 
-checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 1)
-checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 2)
-checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 3)
+checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 34)
+checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 35)
+checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 36)
 
-checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 4)
-checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 5)
-checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 3)
+checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 37)
+checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 38)
+checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 35)
 
 puts "test checkpoint was created"
 
