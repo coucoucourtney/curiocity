@@ -9,8 +9,8 @@ json.favoritable_score @route.f_total
       json.extract! checkpoint, :id
       json.extract! checkpoint.building, :id, :name, :year, :architects, :neighborhood, :metro_stop, :photo_slider, :address, :latitude, :longitude, :architectural_style, :contributor_author, :description, :fun_facts, :main_photo_credit, :user_id, :city, :fact_checked, :district, :favoritable_total, :favoritable_score, :main_picture
       json.favorited checkpoint.building.favorited_by?(@current_user)
-      json.favoritable_total @route.f_total
-      json.favoritable_score @route.f_total
+      json.favoritable_total checkpoint.building.f_total
+      json.favoritable_score checkpoint.building.f_total
     end
   end
 
