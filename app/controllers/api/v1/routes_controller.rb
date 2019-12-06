@@ -2,6 +2,14 @@ class Api::V1::RoutesController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_route, only: [:show, :update, :destroy]
   # after_action :set_route, only: [:create]
+  before_action :set_current_user, only: [:favorite]
+
+
+  def favorite
+    @route = Route.find(params[:id])
+    @current_user.favorite(@route)
+  end
+
 
   def index
     if params[:query].present?
@@ -40,6 +48,10 @@ class Api::V1::RoutesController < Api::V1::BaseController
   end
 
   private
+
+  def set_current_user
+    @current_user = User.find(params[:user_id])
+  end
 
   def set_route
     @route = Route.find(params[:id])

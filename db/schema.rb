@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_12_05_072722) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +37,8 @@ ActiveRecord::Schema.define(version: 2019_12_05_072722) do
     t.string "city"
     t.boolean "fact_checked"
     t.string "district"
-    t.string "favoritable_total"
-    t.string "favoritable_score"
+    t.text "favoritable_total"
+    t.text "favoritable_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_buildings_on_user_id"
@@ -101,6 +103,8 @@ ActiveRecord::Schema.define(version: 2019_12_05_072722) do
     t.string "email"
     t.string "language"
     t.integer "gender"
+
+    
     t.string "favoritor_score"
     t.string "favoritor_total"
     t.string "favoritable_score"
