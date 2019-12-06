@@ -15,7 +15,7 @@ if !@building.user.nil?
   json.user do
     json.extract! @building.user, :id, :open_id, :wechat_name, :avatar, :email, :language, :level, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
   end
-  
+
   # json.favorited do
   #   json.extract! @favorited, :favorited
   # end

@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_12_05_072722) do
-
+ActiveRecord::Schema.define(version: 2019_12_05_101929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,12 +101,10 @@ ActiveRecord::Schema.define(version: 2019_12_05_072722) do
     t.string "email"
     t.string "language"
     t.integer "gender"
-
-    
-    t.string "favoritor_score"
-    t.string "favoritor_total"
-    t.string "favoritable_score"
-    t.string "favoritable_total"
+    t.text "favoritor_score"
+    t.text "favoritor_total"
+    t.text "favoritable_score"
+    t.text "favoritable_total"
     t.boolean "admin", default: false, null: false
   end
 

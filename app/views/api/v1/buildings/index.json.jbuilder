@@ -4,5 +4,9 @@ json.buildings do
     if !building.user.nil?
       json.user building.user, :id, :open_id, :wechat_name, :avatar, :email, :language, :level, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
     end
+    if @user_signed_in
+      json.favorited building.favorited_by?(@user_signed_in)
+      json.favoritable_total building.f_total
+    end
   end
 end
