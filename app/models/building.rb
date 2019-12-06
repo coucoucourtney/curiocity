@@ -9,7 +9,7 @@ class Building < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_all,
-    against: [ :name, :architects, :neighborhood, :architectural_style, :metro_stop ],
+    against: [ :name, :architects, :neighborhood, :architectural_style, :metro_stop, :address ],
     using: {
       tsearch: { prefix: true } # <-- now `incomplete searches` will return something!
     }

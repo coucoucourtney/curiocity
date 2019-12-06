@@ -12,7 +12,11 @@ class Api::V1::RoutesController < Api::V1::BaseController
 
 
   def index
-    @routes = Route.order(:name)
+    if params[:query].present?
+      @routes = Route.global_search(params[:query])
+    else
+      @routes = Route.order(:name)
+    end
   end
 
   def update
