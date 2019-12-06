@@ -11,6 +11,7 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   end
 
   def index
+    @user_signed_in = set_current_user
     if params[:query].present?
       # sql_query = "
       # name @@ :query
@@ -45,7 +46,7 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   end
 
   def show
-    
+
   end
 
   def destroy
@@ -56,7 +57,11 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   private
 
   def set_current_user
-    @current_user = User.find(params[:user_id])
+    if params[:user_id]
+      @current_user = User.find(params[:user_id])
+    else
+      return false
+    end
   end
 
   def set_building
