@@ -6,12 +6,18 @@ class Route < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
+    # against: [:name, :approximate_duration, :approximate_distance, :district, :metro_station_stop,
+    #   :metro_station_start],
+    # associated_against: {
+    #   building: [ :name, :architects, :neighborhood, :architectural_style, :metro_stop, :address ]
+    # },
+    # using: {
+    #   tsearch: { prefix: true }
+    #   } # <-- now `incomplete searches` will return something!
+
     against: [:name, :approximate_duration, :approximate_distance, :district, :metro_station_stop,
-      :metro_station_start],
-    associated_against: {
-      director: [ :name, :architects, :neighborhood, :architectural_style, :metro_stop, :address ]
-    },
+       :metro_station_start],
     using: {
-      tsearch: { prefix: true }
-      } # <-- now `incomplete searches` will return something!
+      tsearch: { prefix: true } # <-- now `incomplete searches` will return something!
+    }
 end
