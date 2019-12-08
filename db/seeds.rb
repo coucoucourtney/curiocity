@@ -143,6 +143,16 @@ puts "destroying users..."
 User.destroy_all
 
 users_data = [
+  { wechat_name: "Curiousity Team",
+    avatar: "http://lc-lyUmBNQE.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
+    open_id: "code",
+    email: "123@abc.cn",
+    language: "english",
+    gender: "2",
+    level: "creator",
+    description: "We are the curiocity team!"
+
+  },
   { wechat_name: "Curious Carrie",
     avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
     open_id: "code",
