@@ -13,13 +13,6 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   def index
     @user_signed_in = set_current_user
     if params[:query].present?
-      # sql_query = "
-      # name @@ :query
-      # OR architects @@ :query
-      # OR district @@ :query
-      # OR architectural_style @@ :query
-      # OR metro_stop @@ :query
-      # "
       @buildings = Building.search_by_all(params[:query])
     else
       @buildings = Building.order(:name)
@@ -38,6 +31,7 @@ class Api::V1::BuildingsController < Api::V1::BaseController
     p building_params
     @building = Building.new(building_params)
     if @building.save
+      @building.user.level += 1
       p @building
       render :show, status: :created
     else
