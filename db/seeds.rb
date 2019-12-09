@@ -143,7 +143,7 @@ puts "destroying users..."
 User.destroy_all
 
 users_data = [
-  { wechat_name: "Curiousity Team",
+  { wechat_name: "The Curiousity Team",
     avatar: "http://lc-lyUmBNQE.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
     open_id: "code",
     email: "123@abc.cn",

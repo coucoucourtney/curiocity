@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_101929) do
+ActiveRecord::Schema.define(version: 2019_12_08_105108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "buildings", force: :cascade do |t|
     t.string "name"
-    t.string "year"
-    t.string "architects"
-    t.string "neighborhood"
+    t.string "year", default: "unlisted"
+    t.string "architects", default: "unlisted"
+    t.string "neighborhood", default: "unlisted"
     t.string "metro_stop"
     t.string "main_picture"
-    t.text "photo_slider", default: [], array: true
+    t.text "photo_slider", default: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/47f0161f1e485e24e59d/robert-ruggiero-3cI1YSp1E7w-unsplash.jpg"], array: true
     t.string "address"
     t.float "latitude"
     t.float "longitude"
-    t.string "architectural_style"
+    t.string "architectural_style", default: "unlisted"
     t.string "contributor_author"
-    t.text "description"
-    t.string "fun_facts"
-    t.string "main_photo_credit"
+    t.text "description", default: "Nothing here yet! Help add one :)"
+    t.string "fun_facts", default: "Nothing here yet!"
+    t.string "main_photo_credit", default: ""
     t.bigint "user_id"
     t.string "city"
     t.boolean "fact_checked"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_101929) do
     t.text "favoritable_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "old_address", default: "unlisted"
     t.index ["user_id"], name: "index_buildings_on_user_id"
   end
 
@@ -96,7 +97,6 @@ ActiveRecord::Schema.define(version: 2019_12_05_101929) do
     t.datetime "updated_at", null: false
     t.string "wechat_name"
     t.string "avatar"
-    t.string "level"
     t.text "description"
     t.string "email"
     t.string "language"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_101929) do
     t.text "favoritable_score"
     t.text "favoritable_total"
     t.boolean "admin", default: false, null: false
+    t.integer "level", default: 0, null: false
   end
 
   add_foreign_key "buildings", "users"
