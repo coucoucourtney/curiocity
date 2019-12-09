@@ -152,7 +152,7 @@ users_data = [
     level: "creator",
     description: "We are the curiocity team!"
 
-  },
+    },
   { wechat_name: "Curious Carrie",
     avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
     open_id: "code",
@@ -189,13 +189,13 @@ route2 = Route.create!(name: "Julu Lululu Circle")
 
 puts "test route created"
 
-checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 34)
-checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 35)
-checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 36)
+checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 25)
+checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 26)
+checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 27)
 
-checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 37)
-checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 38)
-checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 35)
+checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 28)
+checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 29)
+checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 27)
 
 puts "test checkpoint was created"
 
