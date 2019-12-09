@@ -158,7 +158,6 @@ users_data = [
     email: "123@abc.cn",
     language: "english",
     gender: "2",
-    level: "creator",
     description: "We are the curiocity team!"
 
     },
@@ -168,7 +167,6 @@ users_data = [
     email: "123@abc.cn",
     language: "engrish",
     gender: "2",
-    level: "super",
     description: "banana fo fanana"
     },
 
@@ -178,7 +176,6 @@ users_data = [
     email: "456@abc.cn",
     language: "engrish",
     gender: "1",
-    level: "lower",
     description: "banana fo fanana"
     }
 ]
