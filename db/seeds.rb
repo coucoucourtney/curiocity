@@ -12,11 +12,12 @@ Checkpoint.destroy_all
 puts "destroying routes"
 Route.destroy_all
 
+puts "destroying buildings..."
+Building.destroy_all
+
 puts "destroying users..."
 User.destroy_all
 
-puts "destroying buildings..."
-Building.destroy_all
 
 buildings_data = [
   {   name: "The Amyron Apartments",
