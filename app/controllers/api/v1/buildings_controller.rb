@@ -49,7 +49,6 @@ class Api::V1::BuildingsController < Api::V1::BaseController
     p building_params
     @building = Building.new(building_params)
     if @building.save
-      @building.user.level += 1
       p @building
       render :show, status: :created
     else

@@ -193,6 +193,7 @@ puts "#{User.count} users are created"
 routes_data = [
   {
     name: "Wulumuqi Moo-moo Lu",
+    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/6cbea325765a7a989024/Route1.jpg",
     description: "Walking through the heart of Jingin, from Grosvenor house to Lincoln aparment",
     district: "Xuhui",
     approximate_duration: "60",
@@ -200,6 +201,7 @@ routes_data = [
   },
   {
     name: "Julu Lululu Circle",
+    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/d8a3dfc033d78c86eb8f/route2.jpg",
     description: "2 hours walk from Amyron apartment to Bank of China in the bund",
     district: "Jingan",
     approximate_duration: "120",
