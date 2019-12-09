@@ -6,7 +6,7 @@ json.favoritable_count @building.f_total
 # if !@building.user.nil?
 #   json.building do
 #     json.array! @building.user do |data|
-#       json.extract! data, :id, :open_id, :wechat_name, :avatar, :email, :language, :level, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
+#       json.extract! data, :id, :open_id, :wechat_name, :avatar, :email, :language, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
 #       json.commented_at booking.created_at.strftime("%A, %b %d")
 #     end
 #   end

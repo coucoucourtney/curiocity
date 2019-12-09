@@ -158,7 +158,6 @@ users_data = [
     email: "123@abc.cn",
     language: "english",
     gender: "2",
-    level: "creator",
     description: "We are the curiocity team!"
 
     },
@@ -167,8 +166,6 @@ users_data = [
     open_id: "code",
     email: "123@abc.cn",
     language: "engrish",
-    gender: "2",
-    level: "super",
     description: "banana fo fanana"
     },
 
@@ -178,7 +175,6 @@ users_data = [
     email: "456@abc.cn",
     language: "engrish",
     gender: "1",
-    level: "lower",
     description: "banana fo fanana"
     }
 ]
@@ -196,6 +192,7 @@ puts "#{User.count} users are created"
 routes_data = [
   {
     name: "Wulumuqi Moo-moo Lu",
+    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/6cbea325765a7a989024/Route1.jpg",
     description: "Walking through the heart of Jingin, from Grosvenor house to Lincoln aparment",
     district: "Xuhui",
     approximate_duration: "60",
@@ -203,6 +200,7 @@ routes_data = [
   },
   {
     name: "Julu Lululu Circle",
+    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/d8a3dfc033d78c86eb8f/route2.jpg",
     description: "2 hours walk from Amyron apartment to Bank of China in the bund",
     district: "Jingan",
     approximate_duration: "120",
