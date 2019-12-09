@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_08_105108) do
+ActiveRecord::Schema.define(version: 2019_12_09_091948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_105108) do
     t.string "neighborhood", default: "unlisted"
     t.string "metro_stop"
     t.string "main_picture"
-    t.text "photo_slider", default: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/47f0161f1e485e24e59d/robert-ruggiero-3cI1YSp1E7w-unsplash.jpg"], array: true
+    t.text "photo_slider", default: [], array: true
     t.string "address"
     t.float "latitude"
     t.float "longitude"
@@ -106,7 +106,6 @@ ActiveRecord::Schema.define(version: 2019_12_08_105108) do
     t.text "favoritable_score"
     t.text "favoritable_total"
     t.boolean "admin", default: false, null: false
-    t.integer "level", default: 0, null: false
   end
 
   add_foreign_key "buildings", "users"
