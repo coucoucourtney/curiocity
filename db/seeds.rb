@@ -12,6 +12,9 @@ Checkpoint.destroy_all
 puts "destroying routes"
 Route.destroy_all
 
+puts "destroying users..."
+User.destroy_all
+
 puts "destroying buildings..."
 Building.destroy_all
 
@@ -131,16 +134,22 @@ buildings_data = [
 ]
 
 puts "Creating buildings"
-
-buildings_data.each do |data|
-  building = Building.create!(data)
-  p "#{building.name} is created"
+building = []
+buildings_data.each_with_index do |data, index|
+  building[index] = Building.create!(data)
+  p "#{building[index].name} is created"
 end
 
-puts "#{Building.count} buildings are created"
+building_0 = building[0]
+building_1 = building[1]
+building_2 = building[2]
+building_3 = building[3]
+building_4 = building[4]
+building_5 = building[5]
+building_6 = building[6]
+building_7 = building[7]
 
-puts "destroying users..."
-User.destroy_all
+puts "#{Building.count} buildings are created"
 
 users_data = [
   { wechat_name: "The Curiousity Team",
@@ -189,13 +198,13 @@ route2 = Route.create!(name: "Julu Lululu Circle")
 
 puts "test route created"
 
-checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: 25)
-checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: 26)
-checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: 27)
+checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: building_0.id)
+checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: building_1.id)
+checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: building_2.id)
 
-checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: 28)
-checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: 29)
-checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: 27)
+checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: building_4.id)
+checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: building_5.id)
+checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: building_6.id)
 
 puts "test checkpoint was created"
 
