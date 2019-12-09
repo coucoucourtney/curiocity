@@ -1,13 +1,20 @@
 class Api::V1::BuildingsController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
-  before_action :set_building, only: [:show, :update, :destroy, :favorite]
+  before_action :set_building, only: [:show, :update, :destroy]
   # after_action :set_building, only: [:create]
-  before_action :set_current_user, only: [:favorite, :show]
+  before_action :set_current_user, only: [:show]
 
   def favorite
     # @current_user = User.find(params[:user_id])
     # @building = Building.find(params[:id])
+    puts "params.... #{params}"
+    @current_user = User.find(params["favoritor_id"].to_i)
+    puts "@current_user .. #{@current_user}"
+    @building = Building.find(params[:favoritable_id])
     @current_user.favorite(@building)
+    render json: {
+      msg: "ok"
+    }
   end
 
   def index
