@@ -133,11 +133,35 @@ buildings_data = [
       }
 ]
 
+curiocity_user =
+  { wechat_name: "The Curiocity Team",
+    avatar: "http://lc-lyUmBNQE.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
+    open_id: "code",
+    email: "123@abc.cn",
+    language: "english",
+    gender: "2",
+    description: "We are the curiocity team!"
+
+    }
+
+puts "Creating users"
+
+
+  user = User.create!(curiocity_user)
+  p "#{user.wechat_name} is created with id #{user.id}"
+
+
+puts "#{User.count} users are created"
+
+curiocity_user = user
+
 puts "Creating buildings"
 building = []
 buildings_data.each_with_index do |data, index|
   building[index] = Building.create!(data)
   p "#{building[index].name} is created"
+  building[index].user_id = user.id
+  building[index].save!
 end
 
 building_0 = building[0]
@@ -150,44 +174,6 @@ building_6 = building[6]
 building_7 = building[7]
 
 puts "#{Building.count} buildings are created"
-
-users_data = [
-  { wechat_name: "The Curiousity Team",
-    avatar: "http://lc-lyUmBNQE.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
-    open_id: "code",
-    email: "123@abc.cn",
-    language: "english",
-    gender: "2",
-    description: "We are the curiocity team!"
-
-    },
-  { wechat_name: "Curious Carrie",
-    avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
-    open_id: "code",
-    email: "123@abc.cn",
-    language: "engrish",
-    gender: "2",
-    description: "banana fo fanana"
-    },
-
-  { wechat_name: "Moo-Moo-Poo-Poo",
-    avatar: "http://lc-lyumbnqe.cn-n1.lcfile.com/69ac71b4355356809ad6/curiocity_wechat_logo.png",
-    open_id: "code",
-    email: "456@abc.cn",
-    language: "engrish",
-    gender: "1",
-    description: "banana fo fanana"
-    }
-]
-
-puts "Creating users"
-
-users_data.each do |data|
-  user = User.create!(data)
-  p "#{user.wechat_name} is created"
-end
-
-puts "#{User.count} users are created"
 
 
 routes_data = [
