@@ -6,7 +6,27 @@ class Api::V1::RoutesController < Api::V1::BaseController
 
 
   def favorite
-    @current_user.favorite(@route)
+    # @current_user = User.find(params[:user_id])
+    # @building = Building.find(params[:id])
+    if @current_user.favorited?(@route) == false
+      puts "params.... #{params}"
+      # @current_user = User.find(params["favoritor_id"].to_i)
+      puts "@current_user .. #{@current_user}"
+      # @building = Building.find(params[:favoritable_id])
+      @current_user.favorite(@route)
+      render json: {
+        msg: "ok"
+      }
+    else
+      puts "params.... #{params}"
+      # @current_user = User.find(params["favoritor_id"].to_i)
+      puts "@current_user .. #{@current_user}"
+      # @building = Building.find(params[:favoritable_id])
+      @current_user.unfavorite(@route)
+      render json: {
+        msg: "ok"
+      }
+    end
   end
 
 

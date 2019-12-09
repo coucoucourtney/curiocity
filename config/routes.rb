@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get '/favorite', to: 'buildings#favorite'
+      get '/route_favorite', to: 'routes#favorite'
       resources :users, only: [:index, :show, :create, :update, :destroy]
       resources :buildings, only: [:index, :show, :create, :update, :destroy]
       resources :routes, only: [:index, :show, :create, :update, :destroy] do
