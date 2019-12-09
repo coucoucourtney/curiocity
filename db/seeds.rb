@@ -192,19 +192,47 @@ end
 
 puts "#{User.count} users are created"
 
-route1 = Route.create!(name: "Wulumuqi Moo-moo Lu")
-route2 = Route.create!(name: "Julu Lululu Circle")
+
+routes_data = [
+  {
+    name: "Wulumuqi Moo-moo Lu",
+    description: "Walking through the heart of Jingin, from Grosvenor house to Lincoln aparment",
+    district: "Xuhui",
+    approximate_duration: "60",
+    approximate_distance: "1800"
+  },
+  {
+    name: "Julu Lululu Circle",
+    description: "2 hours walk from Amyron apartment to Bank of China in the bund",
+    district: "Jingan",
+    approximate_duration: "120",
+    approximate_distance: "2800"
+  }
+]
+
+puts "Creating routes"
+
+route = []
+routes_data.each_with_index do |data, index|
+  route[index] = Route.create!(data)
+  p "#{route[index].name} is created"
+end
+
+route_0 = route[0]
+route_1 = route[1]
+
+puts "#{Route.count} routes are created"
 
 
-puts "test route created"
+puts "creating checkpoints"
 
-checkpoint1 = Checkpoint.create!(route_id: route1.id, building_id: building_0.id)
-checkpoint2 = Checkpoint.create!(route_id: route1.id, building_id: building_1.id)
-checkpoint3 = Checkpoint.create!(route_id: route1.id, building_id: building_2.id)
+checkpoint1 = Checkpoint.create!(route_id: route_0.id, building_id: building_0.id)
+checkpoint2 = Checkpoint.create!(route_id: route_0.id, building_id: building_1.id)
+checkpoint3 = Checkpoint.create!(route_id: route_0.id, building_id: building_2.id)
 
-checkpoint4 = Checkpoint.create!(route_id: route2.id, building_id: building_4.id)
-checkpoint5 = Checkpoint.create!(route_id: route2.id, building_id: building_5.id)
-checkpoint6 = Checkpoint.create!(route_id: route2.id, building_id: building_6.id)
+checkpoint4 = Checkpoint.create!(route_id: route_1.id, building_id: building_4.id)
+checkpoint5 = Checkpoint.create!(route_id: route_1.id, building_id: building_5.id)
+checkpoint6 = Checkpoint.create!(route_id: route_1.id, building_id: building_6.id)
 
 puts "test checkpoint was created"
 
