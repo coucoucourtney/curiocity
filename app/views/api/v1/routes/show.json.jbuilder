@@ -14,13 +14,12 @@ json.favoritable_score @route.f_total
     end
   end
 
-# if !@building.bookings.nil?
-#   json.bookings do
-#     json.array! @scooter.bookings do |booking|
-#       json.extract! booking, :id, :confirmation, :user_id, :scooter_id, :booking_date
-#       json.commented_at booking.created_at.strftime("%A, %b %d")
+#   if !@route.checkpoints.building.nil?
+#     json.buildings do
+#       json.array! @route.checkpoints.buildings do |building|
+#         json.extract! building, :id, :name, :year, :architects, :neighborhood, :metro_stop, :photo_slider, :address, :latitude, :longitude, :architectural_style, :contributor_author, :description, :fun_facts, :main_photo_credit, :user_id, :city, :fact_checked, :district, :favoritable_total, :favoritable_score, :main_picture
+#       end
 #     end
-#   end
-
+# end
 # json.buildings do
 # json.extract! @building.user, :id, :name
