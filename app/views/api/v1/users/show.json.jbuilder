@@ -1,4 +1,4 @@
-json.extract! @user,  :id, :open_id, :wechat_name, :avatar, :email, :language, :gender, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
+json.extract! @user,  :id, :open_id, :wechat_name, :avatar, :email, :language, :gender, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total, :user_type
 
 json.favorite_buildings do
   json.array! @user.favorited_buildings do |building|

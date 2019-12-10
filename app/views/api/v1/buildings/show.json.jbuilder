@@ -13,7 +13,7 @@ json.favoritable_count @building.f_total
 
 if !@building.user.nil?
   json.user do
-    json.extract! @building.user, :id, :open_id, :wechat_name, :avatar, :email, :language, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total
+    json.extract! @building.user, :id, :open_id, :wechat_name, :avatar, :email, :language, :description, :favoritor_score, :favoritor_total, :favoritable_score, :favoritable_total, :user_type
     json.total_building @building.user.buildings.length
   end
 
