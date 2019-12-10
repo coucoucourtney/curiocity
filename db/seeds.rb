@@ -141,7 +141,8 @@ curiocity_user =
     email: "123@abc.cn",
     language: "english",
     gender: "2",
-    description: "We are the curiocity team!"
+    description: "We are the curiocity team!",
+    user_type: "admin"
 
     }
 
