@@ -21,3 +21,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# wechat app id and secret key
+.env

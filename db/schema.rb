@@ -10,15 +10,106 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_042457) do
+ActiveRecord::Schema.define(version: 2019_12_10_042004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buildings", force: :cascade do |t|
+    t.string "name"
+    t.string "year", default: "unlisted"
+    t.string "architects", default: "unlisted"
+    t.string "neighborhood", default: "unlisted"
+    t.string "metro_stop"
+    t.string "main_picture"
+    t.text "photo_slider", default: [], array: true
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "architectural_style", default: "unlisted"
+    t.string "contributor_author"
+    t.text "description", default: "Nothing here yet! Help add one :)"
+    t.string "fun_facts", default: "Nothing here yet!"
+    t.string "main_photo_credit", default: ""
+    t.bigint "user_id"
+    t.string "city"
+    t.boolean "fact_checked"
+    t.string "district"
+    t.text "favoritable_total"
+    t.text "favoritable_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "old_address", default: "unlisted"
+    t.index ["user_id"], name: "index_buildings_on_user_id"
+  end
+
+  create_table "checkpoints", force: :cascade do |t|
+    t.bigint "building_id"
+    t.bigint "route_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_checkpoints_on_building_id"
+    t.index ["route_id"], name: "index_checkpoints_on_route_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.string "favoritable_type", null: false
+    t.bigint "favoritable_id", null: false
+    t.string "favoritor_type", null: false
+    t.bigint "favoritor_id", null: false
+    t.string "scope", default: "favorite", null: false
+    t.boolean "blocked", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blocked"], name: "index_favorites_on_blocked"
+    t.index ["favoritable_id", "favoritable_type"], name: "fk_favoritables"
+    t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable_type_and_favoritable_id"
+    t.index ["favoritor_id", "favoritor_type"], name: "fk_favorites"
+    t.index ["favoritor_type", "favoritor_id"], name: "index_favorites_on_favoritor_type_and_favoritor_id"
+    t.index ["scope"], name: "index_favorites_on_scope"
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string "approximate_duration"
+    t.float "approximate_distance"
+    t.bigint "user_id"
+    t.float "start_long"
+    t.float "start_lat"
+    t.float "end_long"
+    t.float "end_lat"
+    t.float "radius_search"
+    t.string "main_picture"
+    t.string "district"
+    t.string "favoritable_score"
+    t.string "favoritable_total"
+    t.string "name"
+    t.string "metro_station_stop"
+    t.string "metro_station_start"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_routes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "open_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "wechat_name"
+    t.string "avatar"
+    t.text "description"
+    t.string "email"
+    t.string "language"
+    t.integer "gender"
+    t.text "favoritor_score"
+    t.text "favoritor_total"
+    t.text "favoritable_score"
+    t.text "favoritable_total"
+    t.boolean "admin", default: false, null: false
   end
 
+  add_foreign_key "buildings", "users"
+  add_foreign_key "checkpoints", "buildings"
+  add_foreign_key "checkpoints", "routes"
+  add_foreign_key "routes", "users"
 end
