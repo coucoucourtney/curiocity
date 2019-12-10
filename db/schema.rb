@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_10_042004) do
+ActiveRecord::Schema.define(version: 2019_12_10_081446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2019_12_10_042004) do
     t.text "favoritable_score"
     t.text "favoritable_total"
     t.boolean "admin", default: false, null: false
+    t.string "user_type", default: "user"
   end
 
   add_foreign_key "buildings", "users"
