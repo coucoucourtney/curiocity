@@ -143,6 +143,7 @@ curiocity_user =
     gender: "2",
     description: "We are the curiocity team!",
     user_type: "admin"
+
     }
 
 puts "Creating users"

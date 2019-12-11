@@ -5,7 +5,7 @@ class Building < ApplicationRecord
   has_many :checkpoints
   validates :name, presence: true, uniqueness: true
 
-  before_save :capitalize_names
+  before_validation :capitalize_names
 
   def capitalize_names
     self.name = name.titleize
