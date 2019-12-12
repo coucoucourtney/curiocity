@@ -49,6 +49,8 @@ class Api::V1::RoutesController < Api::V1::BaseController
 
   def create
     p route_params
+    @distance = route_params.approximate_distance / 1000
+    route_params.approximate_distance = @distance.round(1)
     @route = Route.new(route_params)
 
     if @route.save

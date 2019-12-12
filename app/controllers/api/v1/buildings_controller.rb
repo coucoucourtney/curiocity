@@ -48,6 +48,11 @@ class Api::V1::BuildingsController < Api::V1::BaseController
   def create
     p building_params
     @building = Building.new(building_params)
+
+    if @building.description == ""
+      @building.description = "Nothing here yet! Help add one :)"
+    end
+
     if @building.save
       p @building
       render :show, status: :created
