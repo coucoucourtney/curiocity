@@ -343,7 +343,7 @@ routes_data = [
 #  Historical Bund -----------------------------------------------------------------
   {
     name: "Historical Huangpu",
-    main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/1d237b6be320a517ef9c/Route_bund_main.jpeg",
+    main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/57d95629e97231f9c8d6/Bund_walk_main.jpeg",
     description: " From the mid 1800's until WWII, the Bund was a vibrant center for British commerce and is still a destination for tourists and locals alike. With it's iconic view of Shanghai and riverside promenade, it separates historical Puxi on the West side of the river and the ultra modern Pudong on the East. The buildings on this walk along the Western side of the river include some major sites as well as some lesser known works.",
     district: "Huangpu",
     approximate_duration: "60",
