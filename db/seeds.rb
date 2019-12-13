@@ -66,7 +66,7 @@ buildings_data = [
       latitude: "31.208453179",
       longitude: "121.44056709",
       description: "AMidget Apartments on Wukang Road in Shanghai date from 1931. They have been altered since then. The balconies on each side have been enclosed and a new door has been punched through the corner to serve the business located on the ground floor but these decorative panels have survived. (Art Deco Buildings)",
-      main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/e21a4a4a0e83c49788a7/The%20%idget%20Apartments%20-m.jpga87198f762a0a12651/Rong_Mansion_main.png",
+      main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/e21a4a4a0e83c49788a7/The%20Midget%20Apartments%20-m.jpg",
       architectural_style: "Art Deco",
       metro_stop:"上海图书馆 (Shanghai Library)",
       photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/230fd1cd26ff57f10785/The%20Midget%20Apartments%20%20s3.JPG", "http://lc-lyUmBNQE.cn-n1.lcfile.com/78edbbecc0413d04458f/The%20Midget%20Apartments%20%20s2.jpg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/e4961459172f7db31d9b/The%20Midget%20Apartments%20%20s1.jpg"],
@@ -113,7 +113,7 @@ buildings_data = [
   {   name: "Cercle Sportif Francais",
       architects: "Leonard & Veysseyre",
       year: "1929",
-      district: "徐汇（Xuhui",
+      district: "徐汇（Xuhui)",
       address: "茂名南路58号 (58 Maoming Nan Rd)",
       neighborhood: "Former French Concession",
       latitude: "31.21981",
@@ -197,10 +197,10 @@ buildings_data = [
     description: "The building was built in 1916 as McBain Building on the corner of the Bund (currently 1 East-1 Zhongshan Road) and Avenue Edward VII (today's East Yan'an Road), a location known as No.1 on the Bund, near the former French Concession. It stands on a site of 1739 square metres and has a floor area of 11,723 square metres. It was the tallest and one of the largest buildings in Shanghai upon its completion. This fact, adding to its precious location earned it a widespread nickname 'Number One Building on the Bund' (外滩第一楼). The building was designed by Moorhead＆Halse, a famous architectural firm in Shanghai back then and built by contractor Yu Chang Tai. Initially the building was seven stories tall, an extra storey was added atop in 1939. The lot of the building originally belonged two British brothers James and Hayes Hogg, whose trading company Hogg Brothers opened in Shanghai in 1861. In 1899 the brothers decided to close their business in Shanghai and return to Britain. They sold the property to British merchant George McBain, whose company constructed this current building after demolishing an original house on the site. In 1917, one year after its completion the Royal Dutch Shell's Asiatic Petroleum division, which sold kerosene and candles used for lighting before electric lights were invented, bought in much of the building and renamed it the Asia Building. During the Japanese occupation of Shanghai the building was taken over by the Japanese and most of the staff, mainly British, fled Shanghai and relocated in Chongqing. The majority of them returned to Shanghai and continued working in the building after the occupation while the company's profits soared to unprecedented levels. After the People's Republic of China was established, some branches of the company in China closed down, only some 50 employees remained in Shanghai. The East China Petroleum Company took control of the building in 1950. A number of other occupants including the Shanghai Metallurgical Designing & Research Institute, Shanghai housing & land administration bureau and Shanghai Silk Company moved in 1959. The Asiatic Petroleum division of Royal Dutch Shell finally ceased operation in the building in 1966, after which the Shanghai Real Estate Department took the building's control. Two shell-shaped ornaments of the Royal Dutch were removed from a column of the building's façade and relocated to its Beijing Yuanmingyuan office when the company left, now being displayed at the Shanghai History Museum. The building became the headquarters of the China Pacific Insurance Company in 1996 but as of today the building is largely empty. (Wikipedia) ",
     city: "上海",
     district: "黄埔 (Huangpu)",
-    longitude:"",
-    latitude: "",
+    longitude:"121.49139",
+    latitude: "31.23361",
     old_address: "The Bund",
-    main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/f35ec9fcef31b691d10a/asia-building_mp.jpg",
+    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/01c605b5d6d115af9060/Asia%20Building_m.jpg",
     photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/9a0c3317e08f3c52f442/Asia%20Building_1.jpg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/61c2300eb384975f7ce7/Asia%20Building_2.jpg"],
   },
 
@@ -236,8 +236,8 @@ description: "The Union Building is a building on the Bund in Shanghai, China. I
 main_photo_credit: "",
 city: "上海",
 district: "黄埔 (Huangpu)",
-longitude:"",
-latitude:"",
+longitude:"121.49076",
+latitude:"31.23417",
 old_address: "The Bund",
 main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/8de2f194cc53c66f4bce/Bund%20No.3_m.jpeg",
 photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/b7afbbfcdfacabf1be50/Bund%20No.3_2.jpeg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/682178b167405adbfd58/Bund%20No.3_1.jpeg"],
@@ -254,8 +254,8 @@ photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/b7afbbfcdfacabf1be50/Bund%20
   main_photo_credit: "",
   city: "上海",
   district: "黄埔 (Huangpu)",
-  longitude:"",
-  latitude:"",
+  longitude:"121.49066",
+  latitude:"31.23472",
   old_address: "The Bund",
   main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/6fa3d6d3fcdbdf18aa62/Bund%20No.%206_m.jpg",
   photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/1594a15ee08e5728e906/Bund%20No.%206_s1.jpg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/adac06f2733f51d2b6e2/Bund%20No.%206_s2.jpeg"]
@@ -273,8 +273,8 @@ description: "This building was constructed in 1901 by The China Merchants Steam
  main_photo_credit: "",
  city: "上海",
  district: "黄埔 (Huangpu)",
- longitude:"",
- latitude:"",
+ longitude: "121.49073",
+ latitude: "31.23549",
  old_address: "The Bund",
  main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/0f26b094daa023403256/The%20China%20Merchants%20Company%20Building%209_m.jpg",
  photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/5235f526e491ada034cb/The%20China%20Merchants%20Company%20Building%209_s2.jpg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/684c9b04c73f646e92bd/The%20China%20Merchants%20Company%20Building%209_s.jpg", "http://lc-lyUmBNQE.cn-n1.lcfile.com/a6a030bfe91c45ed551b/The%20China%20Merchants%20Company%20Building%209_s3.jpg"],
@@ -322,7 +322,11 @@ building_4 = building[4]
 building_5 = building[5]
 building_6 = building[6]
 building_7 = building[7]
-
+building_8 = building[8]
+building_9 = building[9]
+building_10 = building[10]
+building_11 = building[11]
+building_12 = building[12]
 puts "#{Building.count} buildings are created"
 
 
@@ -334,16 +338,16 @@ routes_data = [
     description: "Stroll through the tree lined streets of the Former French Concession and discover some hidden architectural gems.",
     district: "Xuhui",
     approximate_duration: "60",
-    approximate_distance: "1800"
+    approximate_distance: "3"
   },
 #  Historical Bund -----------------------------------------------------------------
   {
     name: "Historical Huangpu",
-    main_picture: "http://lc-lyumbnqe.cn-n1.lcfile.com/d8a3dfc033d78c86eb8f/route2.jpg",
+    main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/1d237b6be320a517ef9c/Route_bund_main.jpeg",
     description: " From the mid 1800's until WWII, the Bund was a vibrant center for British commerce and is still a destination for tourists and locals alike. With it's iconic view of Shanghai and riverside promenade, it separates historical Puxi on the West side of the river and the ultra modern Pudong on the East. The buildings on this walk along the Western side of the river include some major sites as well as some lesser known works.",
     district: "Huangpu",
-    approximate_duration: "120",
-    approximate_distance: "2800"
+    approximate_duration: "60",
+    approximate_distance: "5"
   }
 ]
 
@@ -363,13 +367,19 @@ puts "#{Route.count} routes are created"
 
 puts "creating checkpoints"
 
-checkpoint1 = Checkpoint.create!(route_id: route_0.id, building_id: building_0.id)
-checkpoint2 = Checkpoint.create!(route_id: route_0.id, building_id: building_1.id)
-checkpoint3 = Checkpoint.create!(route_id: route_0.id, building_id: building_2.id)
+checkpoint1 = Checkpoint.create!(route_id: route_0.id, building_id: building_2.id)
+checkpoint2 = Checkpoint.create!(route_id: route_0.id, building_id: building_0.id)
+checkpoint3 = Checkpoint.create!(route_id: route_0.id, building_id: building_1.id)
+checkpoint4 = Checkpoint.create!(route_id: route_0.id, building_id: building_4.id)
 
-checkpoint4 = Checkpoint.create!(route_id: route_1.id, building_id: building_4.id)
-checkpoint5 = Checkpoint.create!(route_id: route_1.id, building_id: building_5.id)
-checkpoint6 = Checkpoint.create!(route_id: route_1.id, building_id: building_6.id)
+
+checkpoint5 = Checkpoint.create!(route_id: route_1.id, building_id: building_9.id)
+checkpoint6 = Checkpoint.create!(route_id: route_1.id, building_id: building_10.id)
+checkpoint7 = Checkpoint.create!(route_id: route_1.id, building_id: building_11.id)
+checkpoint8 = Checkpoint.create!(route_id: route_1.id, building_id: building_12.id)
+checkpoint9 = Checkpoint.create!(route_id: route_1.id, building_id: building_3.id)
+
+
 
 puts "test checkpoint was created"
 
