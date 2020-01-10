@@ -65,7 +65,7 @@ buildings_data = [
       neighborhood: "Former French Concession",
       latitude: "31.208453179",
       longitude: "121.44056709",
-      description: "AMidget Apartments on Wukang Road in Shanghai date from 1931. They have been altered since then. The balconies on each side have been enclosed and a new door has been punched through the corner to serve the business located on the ground floor but these decorative panels have survived. (Art Deco Buildings)",
+      description: "The Midget Apartments on Wukang Road in Shanghai date from 1931. They have been altered since then. The balconies on each side have been enclosed and a new door has been punched through the corner to serve the business located on the ground floor but these decorative panels have survived. (Art Deco Buildings)",
       main_picture: "http://lc-lyUmBNQE.cn-n1.lcfile.com/e21a4a4a0e83c49788a7/The%20%idget%20Apartments%20-m.jpga87198f762a0a12651/Rong_Mansion_main.png",
       architectural_style: "Art Deco",
       metro_stop:"上海图书馆 (Shanghai Library)",
@@ -262,7 +262,7 @@ photo_slider: ["http://lc-lyUmBNQE.cn-n1.lcfile.com/b7afbbfcdfacabf1be50/Bund%20
 },
 # ==================== bund 7 ===================================
 {
-name: "The China Merchants Company Building",
+name: "China Merchants Company Building",
 architects: "",
 year: "1901",
 neighborhood: "International Settlement",
